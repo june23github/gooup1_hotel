@@ -15,7 +15,7 @@ Router.get('/new', (req, res) => {
   
 Router.post('/new', (req, res) => {
     const { name, price } = req.body;
-    connection.query('INSERT INTO hotels (name, price) VALUES (?, ?)', [name, price], (err, results) => {
+    con.query('INSERT INTO hotels (name, price) VALUES (?, ?)', [name, price], (err, results) => {
         if (err) throw err;
         res.redirect('/hotels');
     });
@@ -23,17 +23,17 @@ Router.post('/new', (req, res) => {
   
 // Edit hotel
 Router.get('/edit/:id', (req, res) => {
-    const { id } = req.params.id;
-    connection.query('SELECT * FROM hotels WHERE id = ?', [id], (err, results) => {
+    const { id } = req.params;
+    con.query('SELECT * FROM hotels WHERE id = ?', [id], (err, results) => {
         if (err) throw err;
         res.render('edit', { hotel: results[0] });
     });
 });
   
 Router.post('/edit/:id', (req, res) => {
-    const { id } = req.params.id;
+    const { id } = req.params;
     const { name, price } = req.body;
-    connection.query('UPDATE hotels SET name = ?, price = ? WHERE id = ?', [name, price, id], (err, results) => {
+    con.query('UPDATE hotels SET name = ?, price = ? WHERE id = ?', [name, price, id], (err, results) => {
         if (err) throw err;
         res.redirect('/hotels');
     });
@@ -41,8 +41,8 @@ Router.post('/edit/:id', (req, res) => {
   
   // Delete hotel
 Router.post('/delete/:id', (req, res) => {
-    const { id } = req.params.id;
-    connection.query('DELETE FROM hotels WHERE id = ?', [id], (err, results) => {
+    const { id } = req.params;
+    con.query('DELETE FROM hotels WHERE id = ?', [id], (err, results) => {
         if (err) throw err;
         res.redirect('/hotels');
     });
