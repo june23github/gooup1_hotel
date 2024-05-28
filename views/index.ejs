@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= title %></title>
+  <title>Hello Gooup1</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="/styles.css">
+  <style>
+    .container {
+      margin-top: 50px;
+      text-align: center;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      font-size: 1.2em;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1><%= title %></h1>
-    <a class="button" href="/hotels">View Hotels</a>
+    <h1>Welcome to HOMEPAGE</h1>
+    <p>Get started by exploring our hotel listings.</p>
+    <a class="btn btn-primary" href="/hotels" style="text-decoration: none;">Discover Hotels</a>
   </div>
 </body>
 </html>

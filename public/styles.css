@@ -38,8 +38,7 @@ label {
   font-weight: bold;
 }
 
-input[type="text"],
-input[type="number"] {
+input[type="text"] {
   width: calc(100% - 22px);
   padding: 10px;
   border: 1px solid #ddd;
@@ -47,42 +46,6 @@ input[type="number"] {
   box-sizing: border-box;
 }
 
-/* Button Styles */
-.button,
-button {
-  display: inline-block;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  background-color: #28a745;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.button:hover,
-button:hover {
-  background-color: #218838;
-}
-
-button[type="submit"] {
-  background-color: #007bff;
-}
-
-button[type="submit"]:hover {
-  background-color: #0056b3;
-}
-
-button.delete {
-  background-color: #dc3545;
-}
-
-button.delete:hover {
-  background-color: #c82333;
-}
 
 /* Table Styles */
 table {
@@ -99,11 +62,6 @@ thead {
 thead th {
   padding: 10px;
   text-align: left;
-}
-
-tbody td {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
 }
 
 tbody tr:hover {

@@ -12,10 +12,10 @@ app.use('/hotels', hotelsRoutes)
 
 
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Hello Gooup1' });
+    res.render('index');
   });
 
   
 app.listen(PORT, () =>{
-    console.log('Server run on https://localhost:', PORT)
+    console.log(`Server run on https://localhost:${PORT}`)
 })
